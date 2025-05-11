@@ -12,4 +12,5 @@
 #
 class Actor < ApplicationRecord
   validates(:name, presence: true)
+  has_many(:characters, foreign_id: "actor_id", class_name:"Character")
 end
